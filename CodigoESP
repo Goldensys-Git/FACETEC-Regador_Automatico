@@ -65,7 +65,7 @@ void setup() {
   WiFiManager wifiManager;
 
   Serial.println("Iniciando WiFiManager...");
-  
+  wifiManager.resetSettings();
   // autoConnect cria um Access Point temporário chamado "ESP32_Config".
   // Se ele já tiver salvo a senha da sua casa, ele conecta direto e ignora o portal.
   if (!wifiManager.autoConnect("ESP32_Config")) {
