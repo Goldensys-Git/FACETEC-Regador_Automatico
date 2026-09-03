@@ -1,0 +1,27 @@
+
+@keyframes MoveFundo {
+    0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+body{
+    background: linear-gradient(45deg, #0a1410, #12281e, #1c3c2f);
+    min-height: 100vh;
+    animation: MoveFundo 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+.centertext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
