@@ -36,7 +36,10 @@ body{
 
 
 
-.progress-circle{
+
+.progress-circle-umidade,
+.progress-circle-estufa,
+.progress-circle-regador{
     width: 200px;
     height: 100px;
     background-color: black;
@@ -45,15 +48,11 @@ body{
     position: relative;
 
     --progress: 90deg; /*Variável dentro da classe*/
-
-    background: conic-gradient( 
-      from 270deg at 50% 100%,
-      rgb(0, 195, 255) var(--progress),
-      rgb(94, 94, 94) var(--progress)
-    );
 }
 
-.progress-circle::before{
+.progress-circle-umidade::before,
+.progress-circle-estufa::before,
+.progress-circle-regador::before{
   content: "";
   position: absolute;
   left: 50%;
@@ -68,6 +67,23 @@ body{
   
 }
 
+.progress-circle-umidade{
+      background: conic-gradient( 
+      from 270deg at 50% 100%,
+      rgb(0, 195, 255) var(--progress),
+      rgb(94, 94, 94) var(--progress)
+    );
+}
+
+.progress-circle-regador{
+  background-color: green;
+}
+
+.progress-circle-estufa{
+  background-color: green;
+
+}
+
 
 .progress-value{
     position: absolute;
@@ -78,3 +94,14 @@ body{
     bottom: 10px;
     /* z-index: 1; */
 }
+
+.descritive-value{
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+
+

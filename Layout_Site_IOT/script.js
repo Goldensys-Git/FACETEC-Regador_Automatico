@@ -1,4 +1,4 @@
-const BarraProgresso = document.querySelector(".progress-circle");
+const BarraProgresso = document.querySelector(".progress-circle-umidade");
 const TextoProgresso = document.querySelector(".progress-value"); 
 
 
