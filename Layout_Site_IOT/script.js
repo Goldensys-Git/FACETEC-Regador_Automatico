@@ -1,11 +1,22 @@
+//SCRIPT PARA TESTES
+
+
 const BarraProgresso = document.querySelector(".progress-circle-umidade");
 const TextoProgresso = document.querySelector(".progress-value"); 
 
+const Botao_Regador = document.querySelector(".botao-regador");
 
 
 let contadorAtual = 0;
-let valorFinal = 85;
+let valorFinal = 70;
 let velocidade = 20;
+
+
+function consoleOutput() {
+    console.log("Botão do regador Pressionado!")
+}
+
+Botao_Regador.addEventListener("click", consoleOutput);
 
 //Função de teste
 

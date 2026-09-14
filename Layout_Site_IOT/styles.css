@@ -21,6 +21,12 @@ body{
     background-size: 400% 400%;
 }
 
+.progress-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .centertext{
     display: flex;
     align-items: center;
@@ -39,7 +45,8 @@ body{
 
 .progress-circle-umidade,
 .progress-circle-estufa,
-.progress-circle-regador{
+.progress-circle-regador,
+.progress-circle-temperatura{
     width: 200px;
     height: 100px;
     background-color: black;
@@ -52,7 +59,8 @@ body{
 
 .progress-circle-umidade::before,
 .progress-circle-estufa::before,
-.progress-circle-regador::before{
+.progress-circle-regador::before,
+.progress-circle-temperatura::before{
   content: "";
   position: absolute;
   left: 50%;
@@ -84,6 +92,9 @@ body{
 
 }
 
+.progress-circle-temperatura{
+  background-color: red;
+}
 
 .progress-value{
     position: absolute;
@@ -103,5 +114,43 @@ body{
   color: white;
 }
 
+.botao-regador{
+  background-color: rgb(64, 226, 49);
+  border-radius: 1px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 32px;
+  
+}
 
+.botao-regador:active,
+.botao-estufa:active{
+  transform: scale(0.90);
+}
 
+.botao-estufa{
+  background-color: rgb(64, 226, 49);
+  border-radius: 1px;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 32px;
+}
+
+/* .button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} */
