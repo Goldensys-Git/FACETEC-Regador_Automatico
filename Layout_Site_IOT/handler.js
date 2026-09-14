@@ -10,3 +10,49 @@ e a senha é salva no navegador (possíveis cookies), assim liberando os control
 -Quando a senha registrada é correta os botôes são liberados, e juntamente aos comandos a senha é enviada para validação no ESP
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+//Definições da Umidade
+const Umidade_Progress = document.querySelector(".progress-circle-umidade")
+const Umidade_Progress_Text = document.querySelector(".progress-value-umidade")
+let Umidade_Valor_Atual = 0
+let Umidade_Animacao;
+
+function UpdateUmidade(NewValue) {
+
+    let Velocidade = 20
+    clearInterval(Umidade_Animacao)
+    
+    Umidade_Animacao = setInterval(() => {
+
+        if (Umidade_Valor_Atual < NewValue) 
+            {
+                Umidade_Valor_Atual++
+            }
+        else if (Umidade_Valor_Atual > NewValue) {
+            Umidade_Valor_Atual--
+        }
+        else {
+            clearInterval(Umidade_Animacao)
+            return;
+        }
+
+        let CalculoGraus = Umidade_Valor_Atual * 1.8
+
+        Umidade_Progress_Text.textContent =  `${Umidade_Valor_Atual}%`
+        Umidade_Progress.style.setProperty("--progress", `${CalculoGraus}deg`)
+    
+
+    }, velocidade)
+
+}

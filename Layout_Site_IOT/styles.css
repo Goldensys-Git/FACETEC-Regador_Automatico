@@ -21,6 +21,62 @@ body{
     background-size: 400% 400%;
 }
 
+
+
+
+
+.popup-senha{
+  position: fixed; /*Relaciona a div com a janela do navegador*/
+  width: 100%; /*100% viewport width*/
+  height: 100%; /*100% viewport height*/
+  z-index: 1; /*"Profundidade" do elemento*/
+  background-color: rgba(0, 0, 0, 0.85);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.input-senha{
+  width: 300px;
+  height: 35px;
+
+  font-size: 16px;
+  border: 2.5px solid rgb(20, 80, 5);
+  border-radius: 2px;
+  outline: none; /*Remove outline padrão do browser*/
+
+  
+}
+
+.input-senha:focus{
+  border-color: #0066cc;
+}
+
+.botao-enviar-senha,
+.botao-sou-visitante{
+  height: 60px;
+  width: 140px;
+  font-weight: 600;
+}
+
+
+.botao-enviar-senha{
+  background-color: rgb(0, 255, 0);
+}
+
+.botao-sou-visitante{
+  background-color: rgb(0, 255, 242);
+}
+
+
+.display-senha-incorreta{
+  color: red;
+  font-weight: 600;
+  display: none;
+}
+
 .progress-container{
   display: flex;
   align-items: center;
@@ -96,7 +152,10 @@ body{
   background-color: red;
 }
 
-.progress-value{
+.progress-value-umidade,
+.progress-value-regador,
+.progress-value-estufa,
+.progress-value-temperatura{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -104,6 +163,12 @@ body{
     color: #fffefe;
     bottom: 10px;
     /* z-index: 1; */
+}
+
+
+.botao-regador,
+.botao-estufa{
+  display: none; /*esconde os botões*/
 }
 
 .descritive-value{
@@ -126,6 +191,8 @@ body{
   
 }
 
+.botao-sou-visitante:active,
+.botao-enviar-senha:active,
 .botao-regador:active,
 .botao-estufa:active{
   transform: scale(0.90);
